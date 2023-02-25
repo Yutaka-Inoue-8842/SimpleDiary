@@ -80,11 +80,20 @@
                     <connections>
                         <outlet property="calendar" destination="Qt3-gU-V0e" id="EOI-Cx-w8q"/>
                         <outlet property="coverImage" destination="CVO-fI-Gjx" id="Cd2-UT-99t"/>
+                        <segue destination="LCH-hc-Upq" kind="showDetail" identifier="toDetail" id="gcE-xO-gal"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+        <!--DiaryDetail-->
+        <scene sceneID="zf3-T4-1gw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DiaryDetail" id="LCH-hc-Upq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fty-1A-Q5M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960" y="-2"/>
         </scene>
     </scenes>
     <resources>

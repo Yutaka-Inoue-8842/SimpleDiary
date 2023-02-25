@@ -38,7 +38,7 @@ extension MainController: FSCalendarDataSource {
 
 extension MainController: FSCalendarDelegate {
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        print("tapped")
+        performSegue(withIdentifier: "toDetail", sender: nil)
     }
 }
 

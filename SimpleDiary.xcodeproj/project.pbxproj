@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		76CD091129A9EE5600EB46CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76CD091029A9EE5500EB46CE /* GoogleService-Info.plist */; };
+		76CD091529AA061900EB46CE /* FireStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CD091429AA061900EB46CE /* FireStore.swift */; };
+		76CD091929AA069B00EB46CE /* DiaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CD091829AA069B00EB46CE /* DiaryDataModel.swift */; };
+		76CD091B29AA08C700EB46CE /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CD091A29AA08C700EB46CE /* DiaryDetailViewController.swift */; };
+		76CD091E29AA090100EB46CE /* DiaryDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76CD091D29AA090100EB46CE /* DiaryDetail.storyboard */; };
 		76DB58DC29A9E92D00E1FC48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DB58DB29A9E92D00E1FC48 /* AppDelegate.swift */; };
 		76DB58DE29A9E92D00E1FC48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DB58DD29A9E92D00E1FC48 /* SceneDelegate.swift */; };
 		76DB58E029A9E92D00E1FC48 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DB58DF29A9E92D00E1FC48 /* MainViewController.swift */; };
@@ -46,6 +50,10 @@
 		56D11D5C7607E71885772190 /* Pods-SimpleDiary-SimpleDiaryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleDiary-SimpleDiaryUITests.release.xcconfig"; path = "Target Support Files/Pods-SimpleDiary-SimpleDiaryUITests/Pods-SimpleDiary-SimpleDiaryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5D89558C54181342D2504E9B /* Pods_SimpleDiary_SimpleDiaryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleDiary_SimpleDiaryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CD091029A9EE5500EB46CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		76CD091429AA061900EB46CE /* FireStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStore.swift; sourceTree = "<group>"; };
+		76CD091829AA069B00EB46CE /* DiaryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDataModel.swift; sourceTree = "<group>"; };
+		76CD091A29AA08C700EB46CE /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
+		76CD091D29AA090100EB46CE /* DiaryDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiaryDetail.storyboard; sourceTree = "<group>"; };
 		76DB58D829A9E92D00E1FC48 /* SimpleDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DB58DB29A9E92D00E1FC48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76DB58DD29A9E92D00E1FC48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +111,7 @@
 		76CD090D29A9EB3C00EB46CE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				76CD091C29AA08CD00EB46CE /* DiaryDetail */,
 				76CD091229A9EEF500EB46CE /* Main */,
 			);
 			path = Controller;
@@ -118,6 +127,8 @@
 		76CD090F29A9EB5100EB46CE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				76CD091729AA068000EB46CE /* DataModel */,
+				76CD091629AA061C00EB46CE /* FirebaseAPI */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -136,6 +147,31 @@
 			children = (
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		76CD091629AA061C00EB46CE /* FirebaseAPI */ = {
+			isa = PBXGroup;
+			children = (
+				76CD091429AA061900EB46CE /* FireStore.swift */,
+			);
+			path = FirebaseAPI;
+			sourceTree = "<group>";
+		};
+		76CD091729AA068000EB46CE /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				76CD091829AA069B00EB46CE /* DiaryDataModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		76CD091C29AA08CD00EB46CE /* DiaryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				76CD091A29AA08C700EB46CE /* DiaryDetailViewController.swift */,
+				76CD091D29AA090100EB46CE /* DiaryDetail.storyboard */,
+			);
+			path = DiaryDetail;
 			sourceTree = "<group>";
 		};
 		76DB58CF29A9E92D00E1FC48 = {
@@ -331,6 +367,7 @@
 				76CD091129A9EE5600EB46CE /* GoogleService-Info.plist in Resources */,
 				76DB58E529A9E92F00E1FC48 /* Assets.xcassets in Resources */,
 				76DB58E329A9E92D00E1FC48 /* Main.storyboard in Resources */,
+				76CD091E29AA090100EB46CE /* DiaryDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,8 +496,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				76DB58E029A9E92D00E1FC48 /* MainViewController.swift in Sources */,
+				76CD091B29AA08C700EB46CE /* DiaryDetailViewController.swift in Sources */,
+				76CD091529AA061900EB46CE /* FireStore.swift in Sources */,
 				76DB58DC29A9E92D00E1FC48 /* AppDelegate.swift in Sources */,
 				76DB58DE29A9E92D00E1FC48 /* SceneDelegate.swift in Sources */,
+				76CD091929AA069B00EB46CE /* DiaryDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

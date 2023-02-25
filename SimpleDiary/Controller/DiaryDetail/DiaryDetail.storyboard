@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FIa-Eu-Roh">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="chn-Bb-kP1">
+            <objects>
+                <navigationController id="FIa-Eu-Roh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7o7-An-2gb">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="T8u-hT-iHW" kind="relationship" relationship="rootViewController" id="nKW-8S-xA1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I79-Hv-7iJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-741" y="-378"/>
+        </scene>
+        <!--Diary Detail View Controller-->
+        <scene sceneID="kLc-Av-98u">
+            <objects>
+                <viewController id="T8u-hT-iHW" customClass="DiaryDetailViewController" customModule="SimpleDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zcZ-PH-s2O">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gv3-zE-kZf">
+                                <rect key="frame" x="0.0" y="103" width="393" height="450"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.artframe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="K2y-mv-D11">
+                                        <rect key="frame" x="0.0" y="1.6666666666666572" width="393" height="447"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="49Q-Xd-T9Z" firstAttribute="trailing" secondItem="K2y-mv-D11" secondAttribute="trailing" id="Hl6-F2-xQp"/>
+                                    <constraint firstItem="K2y-mv-D11" firstAttribute="top" secondItem="49Q-Xd-T9Z" secondAttribute="top" id="Jfa-LD-LIg"/>
+                                    <constraint firstAttribute="bottom" secondItem="K2y-mv-D11" secondAttribute="bottom" constant="-8" id="Pb2-56-ohY"/>
+                                    <constraint firstAttribute="trailing" secondItem="K2y-mv-D11" secondAttribute="trailing" id="hy7-8B-hNW"/>
+                                    <constraint firstItem="K2y-mv-D11" firstAttribute="leading" secondItem="49Q-Xd-T9Z" secondAttribute="leading" id="nnX-Wu-45m"/>
+                                    <constraint firstItem="49Q-Xd-T9Z" firstAttribute="bottom" secondItem="K2y-mv-D11" secondAttribute="bottom" id="qed-f5-gFu"/>
+                                    <constraint firstAttribute="height" constant="450" id="yOh-E4-TFc"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="axh-sN-DRD"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="49Q-Xd-T9Z"/>
+                            </scrollView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCL-ff-on1">
+                                <rect key="frame" x="0.0" y="553" width="393" height="265"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Pye-k7-gj8">
+                                <rect key="frame" x="0.0" y="507" width="393" height="26"/>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9AK-uY-Rka"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CCL-ff-on1" firstAttribute="leading" secondItem="zcZ-PH-s2O" secondAttribute="leading" id="7Gq-TH-dtL"/>
+                            <constraint firstItem="9AK-uY-Rka" firstAttribute="bottom" secondItem="CCL-ff-on1" secondAttribute="bottom" id="GRH-DS-JHw"/>
+                            <constraint firstItem="Pye-k7-gj8" firstAttribute="leading" secondItem="9AK-uY-Rka" secondAttribute="leading" id="JMq-ku-BOk"/>
+                            <constraint firstItem="CCL-ff-on1" firstAttribute="top" secondItem="Pye-k7-gj8" secondAttribute="bottom" constant="20" id="Plo-09-vX1"/>
+                            <constraint firstItem="Gv3-zE-kZf" firstAttribute="trailing" secondItem="9AK-uY-Rka" secondAttribute="trailing" id="SJl-54-OYx"/>
+                            <constraint firstItem="Gv3-zE-kZf" firstAttribute="leading" secondItem="9AK-uY-Rka" secondAttribute="leading" id="eFf-Ru-oCG"/>
+                            <constraint firstAttribute="trailing" secondItem="CCL-ff-on1" secondAttribute="trailing" id="faX-Gu-est"/>
+                            <constraint firstItem="CCL-ff-on1" firstAttribute="top" secondItem="Gv3-zE-kZf" secondAttribute="bottom" id="lPd-cT-gWR"/>
+                            <constraint firstItem="9AK-uY-Rka" firstAttribute="trailing" secondItem="Pye-k7-gj8" secondAttribute="trailing" id="pZB-rk-rNa"/>
+                            <constraint firstItem="Gv3-zE-kZf" firstAttribute="top" secondItem="9AK-uY-Rka" secondAttribute="top" id="scN-jW-Mi5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cb4-xG-WP1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6JM-7z-HxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="281.67938931297709" y="-378.16901408450707"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
