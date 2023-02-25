@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="281.67938931297709" y="-378.16901408450707"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--DiaryEdit-->
         <scene sceneID="bCZ-eV-mrH">
             <objects>
-                <viewControllerPlaceholder id="T11-vr-oZO" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="DiaryEdit" id="T11-vr-oZO" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ld1-qY-20D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1216" y="-378"/>
