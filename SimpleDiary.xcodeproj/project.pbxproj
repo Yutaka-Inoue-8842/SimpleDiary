@@ -125,9 +125,17 @@
 		76CD091229A9EEF500EB46CE /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				76DB58E129A9E92D00E1FC48 /* Main.storyboard */,
 				76DB58DF29A9E92D00E1FC48 /* MainViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		76CD091329A9FB8700EB46CE /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		76DB58CF29A9E92D00E1FC48 = {
@@ -155,13 +163,13 @@
 		76DB58DA29A9E92D00E1FC48 /* SimpleDiary */ = {
 			isa = PBXGroup;
 			children = (
+				76CD091329A9FB8700EB46CE /* Util */,
 				76CD090F29A9EB5100EB46CE /* Model */,
 				76CD090E29A9EB4700EB46CE /* ViewModel */,
 				76CD090D29A9EB3C00EB46CE /* Controller */,
 				76CD090C29A9EB2300EB46CE /* View */,
 				76DB58DB29A9E92D00E1FC48 /* AppDelegate.swift */,
 				76DB58DD29A9E92D00E1FC48 /* SceneDelegate.swift */,
-				76DB58E129A9E92D00E1FC48 /* Main.storyboard */,
 				76DB58E429A9E92F00E1FC48 /* Assets.xcassets */,
 				76DB58E629A9E92F00E1FC48 /* LaunchScreen.storyboard */,
 				76CD091029A9EE5500EB46CE /* GoogleService-Info.plist */,

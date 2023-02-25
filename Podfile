@@ -12,6 +12,10 @@ target 'SimpleDiary' do
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Messaging'
   pod 'Firebase/Firestore'
+  pod 'FSCalendar'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxDataSources'
 
 
   target 'SimpleDiaryTests' do
