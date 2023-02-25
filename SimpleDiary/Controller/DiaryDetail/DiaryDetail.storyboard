@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -33,62 +34,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gv3-zE-kZf">
-                                <rect key="frame" x="0.0" y="103" width="393" height="450"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.artframe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="K2y-mv-D11">
-                                        <rect key="frame" x="0.0" y="1.6666666666666572" width="393" height="447"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="49Q-Xd-T9Z" firstAttribute="trailing" secondItem="K2y-mv-D11" secondAttribute="trailing" id="Hl6-F2-xQp"/>
-                                    <constraint firstItem="K2y-mv-D11" firstAttribute="top" secondItem="49Q-Xd-T9Z" secondAttribute="top" id="Jfa-LD-LIg"/>
-                                    <constraint firstAttribute="bottom" secondItem="K2y-mv-D11" secondAttribute="bottom" constant="-8" id="Pb2-56-ohY"/>
-                                    <constraint firstAttribute="trailing" secondItem="K2y-mv-D11" secondAttribute="trailing" id="hy7-8B-hNW"/>
-                                    <constraint firstItem="K2y-mv-D11" firstAttribute="leading" secondItem="49Q-Xd-T9Z" secondAttribute="leading" id="nnX-Wu-45m"/>
-                                    <constraint firstItem="49Q-Xd-T9Z" firstAttribute="bottom" secondItem="K2y-mv-D11" secondAttribute="bottom" id="qed-f5-gFu"/>
-                                    <constraint firstAttribute="height" constant="450" id="yOh-E4-TFc"/>
-                                </constraints>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gv3-zE-kZf">
+                                <rect key="frame" x="0.0" y="103" width="393" height="434"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="axh-sN-DRD"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="49Q-Xd-T9Z"/>
+                                <connections>
+                                    <outlet property="delegate" destination="T8u-hT-iHW" id="aDQ-9o-x9A"/>
+                                </connections>
                             </scrollView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCL-ff-on1">
-                                <rect key="frame" x="0.0" y="553" width="393" height="265"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCL-ff-on1">
+                                <rect key="frame" x="0.0" y="537" width="393" height="281"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Pye-k7-gj8">
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" defersCurrentPageDisplay="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Pye-k7-gj8">
                                 <rect key="frame" x="0.0" y="507" width="393" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9AK-uY-Rka"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="CCL-ff-on1" firstAttribute="leading" secondItem="zcZ-PH-s2O" secondAttribute="leading" id="7Gq-TH-dtL"/>
-                            <constraint firstItem="9AK-uY-Rka" firstAttribute="bottom" secondItem="CCL-ff-on1" secondAttribute="bottom" id="GRH-DS-JHw"/>
-                            <constraint firstItem="Pye-k7-gj8" firstAttribute="leading" secondItem="9AK-uY-Rka" secondAttribute="leading" id="JMq-ku-BOk"/>
-                            <constraint firstItem="CCL-ff-on1" firstAttribute="top" secondItem="Pye-k7-gj8" secondAttribute="bottom" constant="20" id="Plo-09-vX1"/>
-                            <constraint firstItem="Gv3-zE-kZf" firstAttribute="trailing" secondItem="9AK-uY-Rka" secondAttribute="trailing" id="SJl-54-OYx"/>
-                            <constraint firstItem="Gv3-zE-kZf" firstAttribute="leading" secondItem="9AK-uY-Rka" secondAttribute="leading" id="eFf-Ru-oCG"/>
-                            <constraint firstAttribute="trailing" secondItem="CCL-ff-on1" secondAttribute="trailing" id="faX-Gu-est"/>
-                            <constraint firstItem="CCL-ff-on1" firstAttribute="top" secondItem="Gv3-zE-kZf" secondAttribute="bottom" id="lPd-cT-gWR"/>
-                            <constraint firstItem="9AK-uY-Rka" firstAttribute="trailing" secondItem="Pye-k7-gj8" secondAttribute="trailing" id="pZB-rk-rNa"/>
-                            <constraint firstItem="Gv3-zE-kZf" firstAttribute="top" secondItem="9AK-uY-Rka" secondAttribute="top" id="scN-jW-Mi5"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cb4-xG-WP1"/>
+                    <navigationItem key="navigationItem" id="cb4-xG-WP1">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="PjC-bt-rWi">
+                            <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="0MS-mc-rKD">
+                            <imageReference key="image" image="pencil.line" catalog="system" symbolScale="large"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="T11-vr-oZO" kind="presentation" modalPresentationStyle="fullScreen" id="CBJ-xa-xBD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageScroll" destination="Gv3-zE-kZf" id="kyA-HN-C9q"/>
+                        <outlet property="pageControl" destination="Pye-k7-gj8" id="XiK-M6-2nk"/>
+                        <outlet property="text" destination="CCL-ff-on1" id="gjB-Q1-KBY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6JM-7z-HxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="281.67938931297709" y="-378.16901408450707"/>
         </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="bCZ-eV-mrH">
+            <objects>
+                <viewControllerPlaceholder id="T11-vr-oZO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ld1-qY-20D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216" y="-378"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <image name="pencil.line" catalog="system" width="128" height="98"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -12,6 +12,12 @@
 		76CD091929AA069B00EB46CE /* DiaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CD091829AA069B00EB46CE /* DiaryDataModel.swift */; };
 		76CD091B29AA08C700EB46CE /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CD091A29AA08C700EB46CE /* DiaryDetailViewController.swift */; };
 		76CD091E29AA090100EB46CE /* DiaryDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76CD091D29AA090100EB46CE /* DiaryDetail.storyboard */; };
+		76CD092329AA6ABD00EB46CE /* DiaryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CD092229AA6ABD00EB46CE /* DiaryEditViewController.swift */; };
+		76CD092529AA6ACA00EB46CE /* DiaryEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76CD092429AA6ACA00EB46CE /* DiaryEdit.storyboard */; };
+		76CD092929AA6EEC00EB46CE /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CD092729AA6EEC00EB46CE /* ImageCollectionViewCell.swift */; };
+		76CD092A29AA6EEC00EB46CE /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76CD092829AA6EEC00EB46CE /* ImageCollectionViewCell.xib */; };
+		76CD092F29AA6F1900EB46CE /* AddImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CD092D29AA6F1900EB46CE /* AddImageCollectionViewCell.swift */; };
+		76CD093029AA6F1900EB46CE /* AddImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76CD092E29AA6F1900EB46CE /* AddImageCollectionViewCell.xib */; };
 		76DB58DC29A9E92D00E1FC48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DB58DB29A9E92D00E1FC48 /* AppDelegate.swift */; };
 		76DB58DE29A9E92D00E1FC48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DB58DD29A9E92D00E1FC48 /* SceneDelegate.swift */; };
 		76DB58E029A9E92D00E1FC48 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DB58DF29A9E92D00E1FC48 /* MainViewController.swift */; };
@@ -54,6 +60,12 @@
 		76CD091829AA069B00EB46CE /* DiaryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDataModel.swift; sourceTree = "<group>"; };
 		76CD091A29AA08C700EB46CE /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
 		76CD091D29AA090100EB46CE /* DiaryDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiaryDetail.storyboard; sourceTree = "<group>"; };
+		76CD092229AA6ABD00EB46CE /* DiaryEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEditViewController.swift; sourceTree = "<group>"; };
+		76CD092429AA6ACA00EB46CE /* DiaryEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiaryEdit.storyboard; sourceTree = "<group>"; };
+		76CD092729AA6EEC00EB46CE /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		76CD092829AA6EEC00EB46CE /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		76CD092D29AA6F1900EB46CE /* AddImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		76CD092E29AA6F1900EB46CE /* AddImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		76DB58D829A9E92D00E1FC48 /* SimpleDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DB58DB29A9E92D00E1FC48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76DB58DD29A9E92D00E1FC48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +116,7 @@
 		76CD090C29A9EB2300EB46CE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				76CD092629AA6EB600EB46CE /* DiaryEdit */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -111,6 +124,7 @@
 		76CD090D29A9EB3C00EB46CE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				76CD092129AA6A8E00EB46CE /* DiaryEdit */,
 				76CD091C29AA08CD00EB46CE /* DiaryDetail */,
 				76CD091229A9EEF500EB46CE /* Main */,
 			);
@@ -142,11 +156,11 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		76CD091329A9FB8700EB46CE /* Util */ = {
+		76CD091329A9FB8700EB46CE /* Extention */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Util;
+			path = Extention;
 			sourceTree = "<group>";
 		};
 		76CD091629AA061C00EB46CE /* FirebaseAPI */ = {
@@ -174,6 +188,26 @@
 			path = DiaryDetail;
 			sourceTree = "<group>";
 		};
+		76CD092129AA6A8E00EB46CE /* DiaryEdit */ = {
+			isa = PBXGroup;
+			children = (
+				76CD092229AA6ABD00EB46CE /* DiaryEditViewController.swift */,
+				76CD092429AA6ACA00EB46CE /* DiaryEdit.storyboard */,
+			);
+			path = DiaryEdit;
+			sourceTree = "<group>";
+		};
+		76CD092629AA6EB600EB46CE /* DiaryEdit */ = {
+			isa = PBXGroup;
+			children = (
+				76CD092729AA6EEC00EB46CE /* ImageCollectionViewCell.swift */,
+				76CD092829AA6EEC00EB46CE /* ImageCollectionViewCell.xib */,
+				76CD092D29AA6F1900EB46CE /* AddImageCollectionViewCell.swift */,
+				76CD092E29AA6F1900EB46CE /* AddImageCollectionViewCell.xib */,
+			);
+			path = DiaryEdit;
+			sourceTree = "<group>";
+		};
 		76DB58CF29A9E92D00E1FC48 = {
 			isa = PBXGroup;
 			children = (
@@ -199,7 +233,7 @@
 		76DB58DA29A9E92D00E1FC48 /* SimpleDiary */ = {
 			isa = PBXGroup;
 			children = (
-				76CD091329A9FB8700EB46CE /* Util */,
+				76CD091329A9FB8700EB46CE /* Extention */,
 				76CD090F29A9EB5100EB46CE /* Model */,
 				76CD090E29A9EB4700EB46CE /* ViewModel */,
 				76CD090D29A9EB3C00EB46CE /* Controller */,
@@ -363,8 +397,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76CD092529AA6ACA00EB46CE /* DiaryEdit.storyboard in Resources */,
 				76DB58E829A9E92F00E1FC48 /* LaunchScreen.storyboard in Resources */,
+				76CD093029AA6F1900EB46CE /* AddImageCollectionViewCell.xib in Resources */,
 				76CD091129A9EE5600EB46CE /* GoogleService-Info.plist in Resources */,
+				76CD092A29AA6EEC00EB46CE /* ImageCollectionViewCell.xib in Resources */,
 				76DB58E529A9E92F00E1FC48 /* Assets.xcassets in Resources */,
 				76DB58E329A9E92D00E1FC48 /* Main.storyboard in Resources */,
 				76CD091E29AA090100EB46CE /* DiaryDetail.storyboard in Resources */,
@@ -495,12 +532,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76CD092F29AA6F1900EB46CE /* AddImageCollectionViewCell.swift in Sources */,
 				76DB58E029A9E92D00E1FC48 /* MainViewController.swift in Sources */,
 				76CD091B29AA08C700EB46CE /* DiaryDetailViewController.swift in Sources */,
+				76CD092929AA6EEC00EB46CE /* ImageCollectionViewCell.swift in Sources */,
 				76CD091529AA061900EB46CE /* FireStore.swift in Sources */,
 				76DB58DC29A9E92D00E1FC48 /* AppDelegate.swift in Sources */,
 				76DB58DE29A9E92D00E1FC48 /* SceneDelegate.swift in Sources */,
 				76CD091929AA069B00EB46CE /* DiaryDataModel.swift in Sources */,
+				76CD092329AA6ABD00EB46CE /* DiaryEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
