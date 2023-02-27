@@ -13,17 +13,21 @@ class DiaryEditViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var imageCollectionViewFlowLayout: UICollectionViewFlowLayout!
 
+    enum ActionType {
+        case create
+        case updata
+    }
 
-    let imageNames = ["photo.artframe", "photo.artframe", "photo.artframe"]
+    var actionType: ActionType!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
 
-
         viewSetting()
     }
+
 
     func viewSetting() {
         imageCollectionView.register(UINib(nibName: "ImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "imageCell")
@@ -32,9 +36,11 @@ class DiaryEditViewController: UIViewController {
         imageCollectionViewFlowLayout.minimumInteritemSpacing = 0
         imageCollectionViewFlowLayout.itemSize = CGSize(width: view.frame.width / 2 - imageCollectionViewFlowLayout.minimumInteritemSpacing,
                                                         height: imageCollectionView.frame.height / 2 - imageCollectionViewFlowLayout.minimumLineSpacing)
-
     }
 
+    @IBAction func dissmissButtonTapped(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }
 
 extension DiaryEditViewController: UICollectionViewDataSource {

@@ -12,7 +12,7 @@ class DiaryDetailViewController: UIViewController {
     @IBOutlet weak var imageScroll: UIScrollView!
     @IBOutlet weak var text: UITextView!
     @IBOutlet weak var pageControl: UIPageControl!
-
+    @IBOutlet weak var navigationBar: UINavigationBar!
 
     let imageNames = ["photo.artframe", "photo.artframe", "photo.artframe"]
 
@@ -32,7 +32,7 @@ class DiaryDetailViewController: UIViewController {
         NSLayoutConstraint.activate([
             imageScroll.widthAnchor.constraint(equalToConstant: self.view.frame.width),
             imageScroll.heightAnchor.constraint(equalToConstant: self.view.frame.height / 2),
-            imageScroll.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            imageScroll.topAnchor.constraint(equalTo: self.navigationBar.bottomAnchor),
             imageScroll.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
 
             text.topAnchor.constraint(equalTo: imageScroll.bottomAnchor),
@@ -75,6 +75,9 @@ class DiaryDetailViewController: UIViewController {
         }
     }
 
+    @IBAction func dissmissButtonTapped(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }
 extension DiaryDetailViewController: UIScrollViewDelegate {
 

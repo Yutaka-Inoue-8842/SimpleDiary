@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vjU-2X-xAx">
-                                <rect key="frame" x="0.0" y="59" width="393" height="300"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="6gb-jb-5o2"/>
@@ -46,13 +46,32 @@
                                 </connections>
                             </collectionView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DEL-Bd-o9P">
-                                <rect key="frame" x="0.0" y="359" width="393" height="459"/>
+                                <rect key="frame" x="0.0" y="403" width="393" height="415"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64L-56-13M">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <items>
+                                    <navigationItem id="4KM-Sv-wN3">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.down" catalog="system" id="srD-sV-bEw">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="dissmissButtonTapped:" destination="Y6W-OH-hqX" id="jQP-2h-JJO"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="oOQ-KT-pC2">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <navigationBarAppearance key="standardAppearance">
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </navigationBarAppearance>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -61,11 +80,15 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vjU-2X-xAx" secondAttribute="trailing" id="5IW-zL-hIx"/>
                             <constraint firstItem="DEL-Bd-o9P" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="CZT-mw-b4s"/>
                             <constraint firstItem="vjU-2X-xAx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="EcE-0H-JIn"/>
-                            <constraint firstItem="vjU-2X-xAx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="TvT-bf-CnM"/>
+                            <constraint firstItem="vjU-2X-xAx" firstAttribute="top" secondItem="64L-56-13M" secondAttribute="bottom" id="HFV-5N-NRn"/>
+                            <constraint firstItem="64L-56-13M" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="N1f-hP-F44"/>
                             <constraint firstItem="DEL-Bd-o9P" firstAttribute="top" secondItem="vjU-2X-xAx" secondAttribute="bottom" id="cUk-oh-xZG"/>
+                            <constraint firstItem="64L-56-13M" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="jvD-bl-pPH"/>
+                            <constraint firstItem="64L-56-13M" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="o2v-V6-TOh"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DEL-Bd-o9P" secondAttribute="trailing" id="pMi-Hi-YEE"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="imageCollectionView" destination="vjU-2X-xAx" id="2po-28-Jg9"/>
                         <outlet property="imageCollectionViewFlowLayout" destination="BoH-iW-Fk8" id="6oS-rH-lCu"/>
@@ -74,10 +97,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="5"/>
+            <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.down" catalog="system" width="128" height="70"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

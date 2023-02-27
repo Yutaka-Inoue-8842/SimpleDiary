@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.artframe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CVO-fI-Gjx">
-                                <rect key="frame" x="0.0" y="1.6666666666666572" width="393" height="447"/>
+                                <rect key="frame" x="0.0" y="1.6666666666666572" width="393" height="447.00000000000011"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="450" id="jZb-fj-pD7"/>
@@ -77,15 +77,27 @@
                             <constraint firstItem="Qt3-gU-V0e" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="st2-BH-w4L"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1yc-ca-Nb9"/>
                     <connections>
                         <outlet property="calendar" destination="Qt3-gU-V0e" id="EOI-Cx-w8q"/>
                         <outlet property="coverImage" destination="CVO-fI-Gjx" id="Cd2-UT-99t"/>
                         <segue destination="LCH-hc-Upq" kind="presentation" identifier="toDetail" modalPresentationStyle="fullScreen" id="gcE-xO-gal"/>
+                        <segue destination="7Na-Ox-vXB" kind="presentation" identifier="toEdit" modalPresentationStyle="fullScreen" id="bzE-II-l5j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+        <!--DiaryEdit-->
+        <scene sceneID="u5q-Ck-aw9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DiaryEdit" id="7Na-Ox-vXB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="f4F-Up-ZFN"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="72d-Zi-KhP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947" y="-54"/>
         </scene>
         <!--DiaryDetail-->
         <scene sceneID="zf3-T4-1gw">
@@ -93,7 +105,7 @@
                 <viewControllerPlaceholder storyboardName="DiaryDetail" id="LCH-hc-Upq" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fty-1A-Q5M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="960" y="-2"/>
+            <point key="canvasLocation" x="957" y="46"/>
         </scene>
     </scenes>
     <resources>
